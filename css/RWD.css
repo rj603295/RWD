@@ -1,0 +1,657 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.wrap{
+  max-width: 1049px;
+  margin: 0 auto;
+}
+.header{
+  margin: 0 auto;
+  height: 420px;
+  position: relative;
+  background-image: url('../img/RWD/header_desktop.png');
+}
+@media(max-width: 768px){
+  .header{
+    position: relative;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+}
+
+@media(max-width: 375px){
+  .header{
+    background-image: url('../img/RWD/header_mobile.png');
+    position: relative;
+    width: 100%;
+    background-size: 100% 100%;
+  }
+}
+
+.topmenu{
+  background: rgba(0,0,0,0.75);
+  font-family:"微軟正黑體";
+}
+.topmenu h1 a{
+  text-decoration: none;
+  background-image: url('../img/RWD/logo_w@svg.svg');
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 120px;
+  height: 24px;
+  float: left;
+  font-size: 16px;
+  margin-top: 16px;
+  margin-left: 42px;
+  color: #FFFFFF;
+}
+.topmenu ul{
+  float: right;
+}
+.topmenu li{
+  float: left;
+}
+.topmenu ul{
+  margin-right: 18px;
+}
+.topmenu ul li a{
+  display: block;
+  text-decoration: none;
+  padding-top: 18px;
+  padding-bottom: 17px;
+  margin-right: 30px;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.clearfix{
+  clear: both;
+}
+.showmenu{
+  display: none;
+}
+@media(max-width: 375px){
+  .showmenu{
+    display: block;
+    float: right;
+    text-decoration: none;
+    color: white;
+    margin-top: 16px;
+    margin-right: 22px;
+  }
+  .topmenu ul{
+    max-height: 0px;
+    overflow: hidden;
+    position: absolute;
+    z-index: 100;
+    top: 48px;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.75);
+    transition: 1.3s;
+    margin-right: 0;
+  }
+  .menu-show .topmenu ul{
+    max-height: 500px;
+  }
+  .topmenu li{
+    float: none;
+  }
+  .topmenu ul li a{
+    text-align: center;
+    margin-right: 0;
+  }
+  .topmenu h1 a{
+    margin: 0;
+    margin-top: 17px;
+    margin-left: 13px;
+  }
+}
+
+.header-content{
+  width: 460px;
+  height: 152px;
+  background: rgba(0,0,0,0.35);
+  margin-top: 67px;
+  margin-left: 295px;
+  color: white;
+  font-family: "微軟正黑體";
+  margin-bottom: 145px;
+}
+.header-content h2{
+  padding-top: 20px;
+  margin-left: 22px;
+  font-size: 36px;
+  text-align: center;
+}
+.header-content p{
+  margin-top: 16px;
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.5;
+}
+.content2{
+  display: none;
+}
+@media(max-width: 768px){
+  .header-content{
+    height: 194px;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+  }
+}
+@media(max-width: 375px){
+  .header-content{
+    max-width: 90%;
+    height: 194px;
+    margin: 0 auto;
+    position: absolute;
+     top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+  }
+  .header-content h2{
+    margin-left: 0;
+  }
+  .content2{
+    display: block;
+    text-align: center;
+  }
+  .content1{
+    display: none;
+  }
+}
+
+.feature{
+  background: #efe9e7;
+  font-family: "微軟正黑體";
+  color: #3D1101;
+  position: relative;
+
+}
+.feature > h2{
+  font-size: 20px;
+  color: #3D1101;
+  line-height: 32px;
+  text-align: center;
+  padding-top: 50px;
+
+}
+.feature > h2:before{
+  display: inline-block;
+  height: 1px;
+  position: absolute;
+  content:'';
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 30%;
+  top: 13%;
+}
+.feature > h2:after{
+  display: inline-block;
+  height: 1px;
+  position: absolute;
+  content:'';
+  width: 10%;
+  background-color: rgba(0, 0, 0, 0.5);
+  right: 30%;
+    top: 13%;
+}
+.feature-1, .feature-2, .feature-3{
+  width: 260px;
+  line-height: 1.5;
+}
+.feature img{
+  display: block;
+  border-radius: 50%;
+  margin-top: 31px;
+  margin: 0 auto;
+}
+.feature ul{
+  margin-left: 2px;
+}
+.feature li{
+  margin-left: 60px;
+  float: left;
+}
+.feature ul li h2{
+  text-align: center;
+  margin-top: 20px;
+}
+.feature p{
+  margin-top: 11px;
+}
+.feature-1, .feature-2, .feature-3{
+  margin-top: 31px;
+  padding-bottom: 50px;
+}
+@media(max-width: 768px){
+  .feature li{
+    width: 32%;
+    margin-left: 0;
+  }
+  .feature ul{
+    margin-left: 0;
+    margin: 0 2%;
+  }
+}
+
+@media(max-width: 375px){
+  .feature li{
+    width: 100%;
+    float: none;
+  }
+  .feature ul{
+    margin-left: 0;
+    margin:0 3%;
+  }
+  .feature > h2:before{
+    display: none;
+  }
+  .feature > h2:after{
+    display: none;
+  }
+}
+
+.chef{
+  background: #3D1101;
+  font-family: "微軟正黑體";
+  height: auto;
+}
+.chef img{
+  margin-left: 42px;
+}
+.chef-intro{
+  display: block;
+  float: right;
+  color: white;
+  font-family: "微軟正黑體";
+  color: #EFE9E7;
+  margin-top: 81px;
+  margin-right: 77px;
+}
+.chef-intro h2{
+  font-size: 20px;
+
+}
+.chef-intro h3{
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.chef-intro p{
+  max-width: 410px;
+  height: auto;
+  font-size: 16px;
+  margin-top: 16px;
+}
+@media(max-width: 768px){
+  .chef img{
+    width: 48%;
+    margin-left: 0;
+  }
+  .chef-intro{
+    width: 50%;
+    margin-right: 0;
+    margin:5% 1%;
+  }
+}
+
+@media(max-width: 375px){
+  .chef img{
+    width: 100%;
+    margin-left: 0;
+  }
+  .chef-intro{
+    width: 80%;
+    float: none;
+    margin-right: 0;
+    margin: 0% 10%;
+    padding: 10% 0px;
+  }
+  .cheft-intro p{
+    margin: 0 auto;
+  }
+}
+.feeling{
+  background: #efe9e7;
+  font-family: "微軟正黑體";
+  line-height: 1.5;
+}
+.feeling h2{
+  text-align: center;
+  font-size: 24px;
+  color: #3D1101;
+  padding-top: 50px;
+}
+.feeling img{
+  border-radius: 50%;
+}
+.feeling ul{
+  margin-top: 32px;
+  margin-left: 42px;
+}
+.feeling li{
+  width: 33%;
+  float: left;
+  padding-bottom: 50px;
+}
+.feeling p{
+  max-width: 220px;
+  height: auto;
+  margin-left: 70px;
+}
+.feeling-job{
+  display: block;
+  margin-top: 16px;
+  margin-left: 200px;
+}
+@media(max-width: 768px){
+  .feeling ul{
+    margin-left: 0;
+    margin: 0px 4%;
+    padding: 5% 0px;
+  }
+  .feeling li{
+    margin-left: 0px;
+    margin: 0 auto;
+    width: 33%;
+  }
+  .feeling-job{
+    margin-left: 0;
+    float: right;
+  }
+}
+@media(max-width: 375px){
+  .feeling li{
+    width: 100%;
+  }
+  .feeling-job{
+    margin-left: 0;
+  }
+  
+}
+.map{
+  background: rgba(250,250,250,0.70);
+  font-family: "微軟正黑體";
+  color: #3D1101;
+}
+.map img{
+  max-width: 460px;
+  height: 386px;
+  margin-left: 42px;
+  padding-bottom: 50px;
+}
+.map>h2{
+  text-align: center;
+  font-size: 24px;
+  padding-top: 50px;
+  padding-bottom: 38px;
+  line-height: 1.5;
+}
+.data{
+  float: right;
+}
+.text-style{
+  width: 460px;
+  height: 32px;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  box-shadow: inset 0px 1px 0px 0px #ECECEC;
+  border-radius: 3px;
+  margin-right: 42px;
+  margin-top: 6px;
+}
+.map label{
+  display: block;
+  margin-top: 19px;
+}
+.map form h2{
+  font-family: "PingFangTC-Light";
+  font-size: 14px;
+  color: #3D1101;
+  text-align: left;
+  margin-top: 12px;
+}
+.btn{
+  float: right;
+  margin-top: 30px;
+  font-family: "微軟正黑體";
+
+}
+.btn-submit{
+  margin-right: 42px;
+  width: 70px;
+  height: 32px;
+  background-color: #F56C23;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 0px solid;
+}
+.btn-cancel{
+  width: 70px;
+  height: 32px;
+  background-color: #F56C23;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 0px solid;
+}
+.btn-submit:hover, .btn-cancel:hover{
+  background: gray;
+}
+@media(max-width: 768px){
+  .map img{
+    margin-left: 0;
+    width: 47%;
+    height: auto;
+    margin: 0px 2%;
+  }
+  .data{
+    width: 47%;
+    margin: 0px 1%;
+  }
+  .text-style{
+    width: 95%;
+  }
+  .btn-submit{
+    margin-right: 0;
+  }
+  .map label{
+    margin-top: 0;
+  }
+}
+@media(max-width: 375px){
+  .map img{
+    margin-left: 0;
+    width: 90%;
+    height: auto;
+    margin: 0px 5%;
+  }
+  .data{
+    float: none;
+    width: 100%;
+  }
+  .text-style{
+    width: 90%;
+    margin-right: 0;
+    margin: 0 2%;
+  }
+  .data form label{
+    margin: 0 2%;
+  }
+  .btn{
+    padding-bottom: 50px;
+    margin-right: 0;
+  }
+  .btn-submit{
+    margin-right: 0;
+  }
+  .data form label{
+    margin-right: 2%;
+  }
+}
+
+.footer{
+  display: flex;
+  font-family: "微軟正黑體";
+  background: #efe9e7;
+  color: #3D1101;
+  line-height: 24px;
+}
+.footer h2{
+  margin-top: 50px;
+  font-size: 24px;
+}
+.about{
+  width: 299px;
+  margin-left: 43px;
+}
+.about p{
+  margin-top: 16px;
+  padding-bottom: 50px;
+}
+.contact{
+  margin-left: 21px;
+}
+.contact ul{
+  margin-top: 16px;
+  list-style: disc;
+  margin-left: 20px;
+}
+.logo{
+  margin-top: 50px;
+  margin-left: 150px;
+}
+.logo img{
+  display: block;
+}
+.logo a{
+  margin-left: 11px;
+  text-decoration: none;
+  float: right;
+  margin-top: 22px;
+}
+.fb{
+  color: #4460a0;
+}
+.twitter{
+  color: #00aaec;
+}
+.google{
+  color: #DB4437;
+}
+
+@media(max-width: 768px){
+  .about{
+    width: 33%;
+    margin-left: 0;
+    margin: 0 3%;
+  }
+  .about p{
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .contact{
+    width: 33%;
+    margin-left: 0;
+    margin: 0 3%;
+  }
+  .contact ul{
+    margin-top: 0;
+    margin-left: 0;
+  }
+  .logo{
+    width: 33%;
+    margin-left: 0;
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+}
+@media(max-width: 375px){
+  .footer{
+    display: block;
+  }
+  .footer h2{
+    margin-top: 0;
+    padding-top: 50px;
+  }
+  .about{
+    margin-left: 0;
+    margin: 0 3%;
+    width: 94%;
+  }
+  .about p{
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  .contact{
+    margin-left: 0;
+    margin: 0 3%;
+    width: 94%;
+  }
+  .contact ul{
+    margin-top: 0;
+  }
+  .logo{
+    width: 63%;
+    float: right;
+  }
+}
